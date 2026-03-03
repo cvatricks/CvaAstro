@@ -1,2 +1,6 @@
 flask
 pymongo
+pyswisseph
+geopy
+timezonefinder
+pytz
