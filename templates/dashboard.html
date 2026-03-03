@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Traceability Main Menu</title>
+    <title>CvaAstro Generate Birth Chart</title>
     <link rel="stylesheet" href="\static\dashboard.css">
 </head>
 <style>
@@ -35,17 +35,26 @@ table, th, td {
 </script>
 <body>
     <div class="mainmenu-container">
-        <h2>Traceability Main Menu</h2>
+        <h2>CvaAstro Generate Birth Chart</h2>
         <div id="userContainer"></div>
         <div id="options">
-            <button id="workStartBtn">WORK START</button>
+            <input type="text" id="name" placeholder="Enter Name">
+            <span class="error" id="EmptyNameError">Name required</span>
+            <!button id="workStartBtn">WORK START</button>
             <br><br>
-            <button id="workEndBtn">WORK END</button>
+            <input type="date" id="date" placeholder="Enter Date of Birth">
+            <span class="error" id="EmptyDOBError">Date of Birth required</span>
+            <!button id="workEndBtn">WORK END</button>
             <br><br>
-            <button id="HandOverBtn">HAND OVER</button>
+            <input type="time" id="time" placeholder="Enter Birth Time">
+            <span class="error" id="EmptyTimeError">Time required</span>
+            <!button id="HandOverBtn">HAND OVER</button>
             <br><br>
-            <button id="reportsBtn">REPORTS</button>
+            <input type="text" id="place" placeholder="Enter Birth City Name">
+            <span class="error" id="EmptyPlaceError">Birth City Name required</span>
+            <!button id="reportsBtn">REPORTS</button>
             <br><br>
+            <button id="generateBtn" style="background-color:green;">Generate</button>
         </div>
         <br>
         <button id="logOutBtn" style="background-color:red;">LOGOUT</button>
