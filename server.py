@@ -57,39 +57,6 @@ def dashboardPage():
     return render_template("/dashboard.html", HOST=Config.HOST, PORT=Config.PORT)
 
 
-@app.route('/workstart', methods=['GET', 'POST'])
-def workstart():
-    return render_template("/scancode.html", HOST=Config.HOST, PORT=Config.PORT, WTYPE="start")
-
-@app.route('/workend', methods=['GET', 'POST'])
-def workend():
-    return render_template("/scancode.html", HOST=Config.HOST, PORT=Config.PORT, WTYPE="end")
-
-@app.route('/handover', methods=['GET', 'POST'])
-def handover():
-    return render_template("/scancode.html", HOST=Config.HOST, PORT=Config.PORT, WTYPE="handover")
-
-@app.route('/updatedata', methods=['GET', 'POST'])
-def updatedata():
-    data = request.json
-    decodedText = data.get("decodedText")
-    wtype = data.get("WTYPE")
-    user = data.get("user")
-    jobid = jobdb.find_one({"qrcode": str(decodedText)})
-    if jobid:
-       workdata = {
-           "process_name" : user,
-           "work" : wtype,
-           "datetime" : datetime.now() + timedelta(hours=5, minutes=30),
-           "jobid" : decodedText
-       }
-       workdataupdated = workdbdata.insert_one(workdata)
-       if workdataupdated:
-           return jsonify({"success": True, "message": f"Work status updated by {user}"})
-       else:
-           return jsonify({"success": False, "message": "Work status not able to update!"})
-    else:
-       return jsonify({"success": False, "message": "Job not available in database!"})
 @app.route('/reports', methods=['GET', 'POST'])
 def reports():
     data = request.json
@@ -113,3 +80,4 @@ def reports():
 if __name__ == "__main__":
     #app.run(debug=True)
     app.run(host=Config.IP, port=Config.PORT)
+
