@@ -9,8 +9,7 @@ app = Flask(__name__)
 # MongoDB Connection
 users_collection = Config.users  # Collection where users are stored
 active_sessions = Config.sessions # Collection where sessions are stored
-workdbdata = Config.workdata # traceablity data
-jobdb = Config.jobid # traceablity data
+workdbdata = Config.workdata # astro data
 
 @app.route("/", methods=["GET"])
 def indexPage():
@@ -80,4 +79,5 @@ def reports():
 if __name__ == "__main__":
     #app.run(debug=True)
     app.run(host=Config.IP, port=Config.PORT)
+
 
