@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>CvaAstro Generate Birth Chart</title>
+    <title>Generate Birth Chart</title>
     <link rel="stylesheet" href="\static\dashboard.css">
 </head>
 <style>
@@ -40,22 +40,18 @@ table, th, td {
             <button id="logOutBtn" style="background-color:red;right:20px;">LOGOUT</button>
         </div>
         <div id="options">
-            <p>Name : </p>
-            <input type="text" id="name" placeholder="Enter Name">
+            Name : <input type="text" id="name" placeholder="Enter Name">
             <span class="error" id="EmptyNameError">Name required</span>
-            <br><br>
-            <p>Date of Birth : </p>
-            <input type="date" id="date" placeholder="Enter Date of Birth">
+            <br>
+            Date of Birth : <input type="date" id="date" placeholder="Enter Date of Birth">
             <span class="error" id="EmptyDOBError">Date of Birth required</span>
-            <br><br>
-            <p>Birth Time : </p>
-            <input type="time" id="time" placeholder="Enter Birth Time">
+            <br>
+            Birth Time : <input type="time" id="time" placeholder="Enter Birth Time">
             <span class="error" id="EmptyTimeError">Time required</span>
-            <br><br>
-            <p>Birth Place : </p>
-            <input type="text" id="place" placeholder="Enter Birth City Name">
+            <br>
+            Birth Place : <input type="text" id="place" placeholder="Enter Birth City Name">
             <span class="error" id="EmptyPlaceError">Birth City Name required</span>
-            <br><br>
+            <br>
             <button id="generateBtn" style="background-color:green;">GENERATE</button>
         </div>
         <br>
