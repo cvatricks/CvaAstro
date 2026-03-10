@@ -14,7 +14,7 @@ table, th, td {
         font-size: smaller;
 }
 </style>
-<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    
 <script>
     const HOST = "{{ HOST }}";
     const PORT = "{{ PORT }}";
@@ -35,7 +35,7 @@ table, th, td {
 </script>
 <body>
     <div class="mainmenu-container">
-        <h2>CvaAstro Generate Birth Chart</h2>
+        <h2>Generate Birth Chart</h2>
         <div id="userContainer">
             <button id="logOutBtn" style="background-color:red;right:20px;">LOGOUT</button>
         </div>
@@ -67,12 +67,16 @@ table, th, td {
         document.getElementById("generateBtn").addEventListener("click", async function() {
             let optionsContainer = document.getElementById("options");
             optionsContainer.innerHTML = "<p>Generating...</p><br>";
+            const namE = document.getElementById("name").value.trim();
+            const datE = document.getElementById("date").value.trim();
+            const timE = document.getElementById("time").value.trim();
+            const placE = document.getElementById("place").value.trim();
             const response = await fetch("http://" + HOST + ":" + PORT + "/reports", {
                 method: "POST",
                 headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ user })
+            body: JSON.stringify({ namE, datE, timE, placE })
             });
             const data = await response.json();
             if (data.success) {
