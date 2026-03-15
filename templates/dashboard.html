@@ -36,9 +36,7 @@ table, th, td {
 <body>
     <div class="mainmenu-container">
         <h2>Generate Birth Chart</h2>
-        <div id="userContainer">
-            <button id="logOutBtn" style="background-color:red;right:20px;">LOGOUT</button>
-        </div>
+        <div id="userContainer"></div>
         <div id="options">
             Name : <input type="text" id="name" placeholder="Enter Name">
             <span class="error" id="EmptyNameError">Name required</span>
@@ -62,7 +60,7 @@ table, th, td {
         let user = jsonData.login_id;
         let userContainer = document.getElementById("userContainer");
 
-        userContainer.innerHTML = `<p style="text-align:left;">Login ID : ${user}</p>`;
+        userContainer.innerHTML = `<p style="text-align:left;">Login ID : ${user}</p><button id="logOutBtn" style="background-color:red;right:20px;">LOGOUT</button>`;
 
         document.getElementById("generateBtn").addEventListener("click", async function() {
             let optionsContainer = document.getElementById("options");
