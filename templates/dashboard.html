@@ -38,16 +38,16 @@ table, th, td {
         <h2>Generate Birth Chart</h2>
         <div id="userContainer"></div>
         <div id="options">
-            Name : <input type="text" id="name" placeholder="Enter Name">
+            Name<input type="text" id="name" placeholder="Enter Name">
             <span class="error" id="EmptyNameError">Name required</span>
             <br>
-            Date of Birth : <input type="date" id="date" placeholder="Enter Date of Birth">
+            Date of Birth<input type="date" id="date" placeholder="Enter Date of Birth">
             <span class="error" id="EmptyDOBError">Date of Birth required</span>
             <br>
-            Birth Time : <input type="time" id="time" placeholder="Enter Birth Time">
+            Birth Time<input type="time" id="time" placeholder="Enter Birth Time">
             <span class="error" id="EmptyTimeError">Time required</span>
             <br>
-            Birth Place : <input type="text" id="place" placeholder="Enter Birth City Name">
+            Birth Place<input type="text" id="place" placeholder="Enter Birth City Name">
             <span class="error" id="EmptyPlaceError">Birth City Name required</span>
             <br>
             <button id="generateBtn" style="background-color:green;">GENERATE</button>
@@ -60,7 +60,7 @@ table, th, td {
         let user = jsonData.login_id;
         let userContainer = document.getElementById("userContainer");
 
-        userContainer.innerHTML = `<p style="text-align:left;">Login ID : ${user}</p><button id="logOutBtn" style="background-color:red;right:20px;">LOGOUT</button>`;
+        userContainer.innerHTML = `<p style="text-align:left;">Login ID : ${user}</p><button id="logOutBtn" style="background-color:red;right:20px;width:25%;">LOGOUT</button>`;
 
         document.getElementById("generateBtn").addEventListener("click", async function() {
             let optionsContainer = document.getElementById("options");
