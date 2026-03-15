@@ -60,7 +60,7 @@ table, th, td {
         let user = jsonData.login_id;
         let userContainer = document.getElementById("userContainer");
 
-        userContainer.innerHTML = `<p style="text-align:left;">Login ID : ${user}</p><button id="logOutBtn" style="background-color:red;right:20px;width:25%;">LOGOUT</button>`;
+        userContainer.innerHTML = `<p style="text-align:left;">Login ID : ${user}<button id="logOutBtn" style="background-color:red;right:20px;width:25%;">LOGOUT</button></p>`;
 
         document.getElementById("generateBtn").addEventListener("click", async function() {
             let optionsContainer = document.getElementById("options");
