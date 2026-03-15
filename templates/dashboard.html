@@ -63,12 +63,12 @@ table, th, td {
         userContainer.innerHTML = `<p style="text-align:left;">Login ID : ${user}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="logOutBtn" style="background-color:red;width:25%;">LOGOUT</button></p>`;
 
         document.getElementById("generateBtn").addEventListener("click", async function() {
-            let optionsContainer = document.getElementById("options");
-            optionsContainer.innerHTML = "<p>Generating...</p><br>";
             const namE = document.getElementById("name").value.trim();
             const datE = document.getElementById("date").value.trim();
             const timE = document.getElementById("time").value.trim();
             const placE = document.getElementById("place").value.trim();
+            let optionsContainer = document.getElementById("options");
+            optionsContainer.innerHTML = "<p>Generating...</p><br>";
             const response = await fetch("http://" + HOST + ":" + PORT + "/reports", {
                 method: "POST",
                 headers: {
