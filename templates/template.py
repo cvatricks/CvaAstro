@@ -1,9 +1,8 @@
 class Template(object):
 
-report = """
-<table border="1"
-    style="width: 100%; max-width: 360px; border-collapse: collapse; background-color: #FFF6E6; font-family: Arial, sans-serif; font-weight: bold; font-color: #FFB752; border-color: #FF852E;">
-    <tr>
+    report = """
+    <table border="1" style="width: 100%; max-width: 360px; border-collapse: collapse; background-color: #FFF6E6; font-family: Arial, sans-serif; font-weight: bold; font-color: #FFB752; border-color: #FF852E;">
+        <tr>
         <td style="width: 25%; height: 75px;">
             <p style="color:brown;font-size:12px;text-align:left;">1<br><br><br><br></p>
             <p style="color:brown;font-size:10px;text-align:right;">மீனம்</p>
@@ -20,9 +19,9 @@ report = """
             <p style="color:brown;font-size:12px;text-align:left;">4<br><br><br><br></p>
             <p style="color:brown;font-size:10px;text-align:right;">மிதுன</p>
         </td>
-    </tr>
+        </tr>
 
-    <tr>
+        <tr>
         <td style="height: 75px;">
             <p style="color:brown;font-size:12px;text-align:left;">5<br><br><br><br></p>
             <p style="color:brown;font-size:10px;text-align:right;">கும்ப</p>
@@ -34,9 +33,9 @@ report = """
             <p style="color:brown;font-size:12px;text-align:left;">6<br><br><br><br></p>
             <p style="color:brown;font-size:10px;text-align:right;">கடக</p>
         </td>
-    </tr>
+        </tr>
 
-    <tr>
+        <tr>
         <td style="height: 75px;">
             <p style="color:brown;font-size:12px;text-align:left;">7<br><br><br><br></p>
             <p style="color:brown;font-size:10px;text-align:right;">மகர</p>
@@ -45,9 +44,9 @@ report = """
             <p style="color:brown;font-size:12px;text-align:left;">8<br><br><br><br></p>
             <p style="color:brown;font-size:10px;text-align:right;">சிம்ம</p>
         </td>
-    </tr>
+        </tr>
 
-    <tr>
+        <tr>
         <td style="height: 75px;">
             <p style="color:brown;font-size:12px;text-align:left;">9<br><br><br><br></p>
             <p style="color:brown;font-size:10px;text-align:right;">தனுசு</p>
@@ -64,7 +63,7 @@ report = """
             <p style="color:brown;font-size:12px;text-align:left;">12<br><br><br><br></p>
             <p style="color:brown;font-size:10px;text-align:right;">கன்னி</p>
         </td>
-    </tr>
-</table>
+        </tr>
+    </table>
 
-"""
+    """
