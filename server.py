@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from config import Config
 from flask import Flask, request, jsonify, render_template
 from werkzeug.security import check_password_hash
-from templates.Template import report
+from templates.template.Template import report
 
 app = Flask(__name__)
 
