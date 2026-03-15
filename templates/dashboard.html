@@ -7,13 +7,6 @@
     <title>Generate Birth Chart</title>
     <link rel="stylesheet" href="\static\dashboard.css">
 </head>
-<style>
-table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        font-size: smaller;
-}
-</style>
     
 <script>
     const HOST = "{{ HOST }}";
@@ -60,7 +53,7 @@ table, th, td {
         let user = jsonData.login_id;
         let userContainer = document.getElementById("userContainer");
 
-        userContainer.innerHTML = `<p style="text-align:left;">Login ID : ${user}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="logOutBtn" style="background-color:red;width:25%;">LOGOUT</button></p>`;
+        userContainer.innerHTML = `<p style="text-align:left;">Login ID : ${user}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="logOutBtn" style="background-color:red;width:25%;">LOGOUT</button></p>`;
 
         document.getElementById("generateBtn").addEventListener("click", async function() {
             const namE = document.getElementById("name").value.trim();
